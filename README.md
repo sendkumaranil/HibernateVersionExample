@@ -1,0 +1,2 @@
+# HibernateVersionExample
+Using XML Mapping
