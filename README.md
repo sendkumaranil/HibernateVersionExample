@@ -40,6 +40,11 @@ it throws Exception.
 
 <b>Note:</b>Remove version tag and do testing we won't get exception.
  
+Timestamp Optimistic locking
+------------------------------
+This is same of Version but only difference is instead of using version it uses timestamp column in database table.
+
+
 
 RDBMS (MysQL) Table Script:
 ---------------------------
