@@ -29,6 +29,18 @@ OutPut:
 <b>org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect):</b>
 we will get above error while we updating the same record with another client (TestVersionDemo2).
 
+It is beacuse while inserting or updating record into database it will check for version value. Version value should be same
+to the value when it retrieved from the database otherwise it throws Exception.
+
+for example: <br>
+Account account=(Account)session.get(Account.class,7)<br>
+lets say version is now 6
+while updating the record again get the version from database if it is not equal to version no 6 then
+it throws Exception.
+
+<b>Note:</b>Remove version tag and do testing we won't get exception.
+ 
+
 RDBMS (MysQL) Table Script:
 ---------------------------
 
